@@ -1,15 +1,17 @@
-# Contribution [#]: [Issue Title]
+# Contribution [#]: Add More Rest API Examples
 
-**Contribution Number:** [1 / 2 / 3]  
-**Student:** [Your Name]  
-**Issue:** [GitHub issue link]  
-**Status:** [Phase I / Phase II / Phase III / Phase IV] [In Progress / Complete]
+**Contribution Number:** [1]  
+**Student:** [Nathan Bezabeh]  
+**Issue:** [[GitHub issue link](https://github.com/k2-fsa/sherpa-onnx/tree/master/rust-api-examples)]  
+**Status:** [Phase I]
 
 ---
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs explaining why this issue interests you, how it matches your skills/learning goals, what you hope to learn]
+[I chose this issue because it connects well with my goals in software engineering and AI. The sherpa-onnx project is related to speech recognition and machine learning tooling, which makes it more interesting and useful for my background than a basic documentation-only issue. The issue asks for more Rust API examples, and the repository already has existing C API examples and Rust examples that I can use as references.
+
+This issue also fits the project timeline because I can narrow the scope to one specific example instead of trying to complete the entire issue. My goal is to work on one missing Rust API example, such as a non-streaming Paraformer example, and follow the structure already used in the repository. I chose it because it will help me practice reading an open-source codebase, learning Rust patterns, testing code locally, and submitting a clean pull request.]
 
 ---
 
