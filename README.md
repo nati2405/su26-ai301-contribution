@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** [Nathan Bezabeh]  
 **Issue:** [[GitHub issue link](https://github.com/k2-fsa/sherpa-onnx/tree/master/rust-api-examples)]  
-**Status:** [Phase II/In progress]
+**Status:** [Phase III/In progress]
 
 ---
 
@@ -114,24 +114,23 @@ I will compare my example against the existing Rust examples to make sure the co
 ### Evaluate:
 I will verify the solution by running the new Paraformer Rust example locally. I will also run cargo run --example version again to confirm the Rust examples still compile correctly.
 
-### Testing Strategy
-Unit Tests
+## Testing Strategy
 
-Confirm the new Rust example compiles.
+### Unit Tests
 
-Confirm the new Rust example runs with the expected model files.
-
-Confirm existing Rust example cargo run --example version still works.
+- [x] Confirmed the new Rust example compiles by running `cargo check --example paraformer`.
+- [x] Confirmed the existing Rust example setup still works by running `cargo run --example version`.
+- [x] Confirmed the new Paraformer Rust example accepts model, tokens, and WAV file arguments correctly.
 
 ### Integration Tests
 
-Run the Paraformer Rust example end-to-end with a sample audio file.
-
-Compare the behavior with the existing C API Paraformer example.
+- [x] Downloaded and extracted the Paraformer model package locally.
+- [x] Ran the new Paraformer Rust example end-to-end with `test_wavs/0.wav`.
+- [x] Confirmed the example produced decoded text and a performance summary.
 
 ### Manual Testing
 
-I manually tested the Rust example environment by running cargo run --example version. I also checked that Paraformer C API examples exist and confirmed that a matching Rust Paraformer example is currently missing.
+I manually tested the new Rust example by running:
 
 ### Implementation Notes
 
@@ -143,10 +142,21 @@ Week 2 Progress
 
 Completed Phase II setup and reproduction. I cloned my fork locally, created the working branch, installed Rust/Cargo, verified that the Rust examples compile by running cargo run --example version, confirmed that Paraformer C API examples exist, and confirmed that a matching Rust Paraformer example is currently missing.
 
-Code Changes
-Files modified: Not started yet.
-Key commits: Not started yet.
-Approach decisions: I decided to focus only on one missing example instead of trying to complete the full issue.
+Week 3 Progress
+
+Started Phase III implementation. I added a new Rust example file for non-streaming Paraformer and created a helper script to download the model and run the example. I tested the example locally with the Paraformer model and confirmed it runs successfully end-to-end.
+
+## Code Changes:
+
+Files modified: 
+  - rust-api-examples/examples/paraformer.rs
+  - rust-api-examples/run-paraformer.sh
+
+Key commits:
+  - Add Paraformer Rust API example
+  - Add Paraformer Rust example script
+    
+Approach decisions: I followed the structure of existing Rust ASR examples and used c-api-examples/paraformer-c-api.c as the main reference for model paths, tokens, WAV input, and offline recognizer behavior.
 ---
 
 ## Pull Request
@@ -167,15 +177,15 @@ Approach decisions: I decided to focus only on one missing example instead of tr
 
 ### Technical Skills Gained
 
-[What you learned technically]
+I learned how to work inside a Rust example project, create a new Rust API example, run `cargo check`, pass command-line arguments with `clap`, and test an offline speech recognition model locally.
 
 ### Challenges Overcome
 
-[What was hard and how you solved it]
+The biggest challenge was setting up Rust/Cargo on Windows and making sure the Paraformer model files were downloaded correctly. I first ran into a `cargo is not recognized` issue, then later had to manually download and extract the Paraformer model before the example could run end-to-end.
 
 ### What I'd Do Differently Next Time
 
-[Reflection on your process]
+Next time, I would check the existing run scripts and model download steps earlier before testing the example. That would make it easier to know whether a failure is from my code or just from missing model/audio files.
 
 ---
 
