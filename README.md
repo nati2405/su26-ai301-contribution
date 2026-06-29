@@ -3,7 +3,7 @@
 **Contribution Number:** [1]  
 **Student:** [Nathan Bezabeh]  
 **Issue:** [[GitHub issue link](https://github.com/k2-fsa/sherpa-onnx/tree/master/rust-api-examples)]  
-**Status:** [Phase III/In progress]
+**Status:** [Phase IV/In progress]
 
 ---
 
@@ -146,6 +146,10 @@ Week 3 Progress
 
 Started Phase III implementation. I added a new Rust example file for non-streaming Paraformer and created a helper script to download the model and run the example. I tested the example locally with the Paraformer model and confirmed it runs successfully end-to-end.
 
+Week 4 Progress
+
+Completed Phase IV by opening a pull request to the upstream `k2-fsa/sherpa-onnx` repository. The PR is currently awaiting maintainer review.
+
 ## Code Changes:
 
 Files modified: 
@@ -161,15 +165,17 @@ Approach decisions: I followed the structure of existing Rust ASR examples and u
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when submitted]
+**PR Link:** [[GitHub PR URL when submitted](https://github.com/k2-fsa/sherpa-onnx/pull/3707)]
 
-**PR Description:** [Draft or final PR description - much of the content above can be adapted]
+**PR Description:** 
+
+I submitted a pull request to the upstream k2-fsa/sherpa-onnx repository that adds a non-streaming Paraformer example for the Rust API. The PR adds a new Rust example file and a helper run script so Rust users can run Paraformer ASR using a model file, tokens file, and WAV input.
 
 **Maintainer Feedback:**
 - [Date]: [Summary of feedback received]
 - [Date]: [How you addressed it]
 
-**Status:** [Awaiting review / Iterating / Approved / Merged]
+**Status:** [Awaiting review]
 
 ---
 
